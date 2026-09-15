@@ -1,0 +1,85 @@
+{
+  "content": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "model.sysml",
+        "sha256": "30cc3bc0e223d59dd4207812e25404d696c1950fd2a64c7c40049bf305883742"
+      },
+      {
+        "path": "noema.package.toml",
+        "sha256": "1b56f8f482c7d7bbbb512fff4a575209127d6ef2e2f9215a843e44cdd263a95d"
+      },
+      {
+        "path": "view.toml",
+        "sha256": "05fe002257e7c7406caa6b3e34e85584876835396967ba8804601e06f471cdeb"
+      }
+    ],
+    "sha256": "55cfbc169c1dd8b24801321683a172ba4dd9df2b031b3364dfc180edca24ea78"
+  },
+  "evidence": {
+    "ci": "passed",
+    "report_sha256": "166e9003cf97b4fbb286c852c303870a9fde628c83d7cafbce50ed860344062c",
+    "review": "approved",
+    "review_url": "https://github.com/blentry/noema-packages/pull/2",
+    "reviewer": "codex-delegated-by-blentry",
+    "scope": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "maintainer": "blentry",
+  "manifest": {
+    "contracts": [
+      "view.toml"
+    ],
+    "dependencies": [],
+    "exports": {
+      "symbols": [
+        "ResistiveOperatingPoint::Point"
+      ],
+      "views": [
+        "resistive-operating-point"
+      ]
+    },
+    "id": "org.noema.resistive-operating-point",
+    "kind": "library",
+    "license": "Apache-2.0",
+    "license_file": "LICENSE",
+    "model": {
+      "files": [
+        "model.sysml"
+      ]
+    },
+    "release": "0.1.0",
+    "schema": "noema.package/0.2",
+    "standard": {
+      "kerml": "1.0",
+      "library": "pilot-2026-04",
+      "sysml": "2.0"
+    }
+  },
+  "mappings": [],
+  "schema": "noema.registry-release/0.1",
+  "source": {
+    "commit": "97a6ef23619ebf0896f7c1d2f590433dcf53f5b9",
+    "source": "https://github.com/blentry/noema-packages.git",
+    "source_kind": "git",
+    "subdir": "packages/resistive-operating-point/0.1.0"
+  }
+}

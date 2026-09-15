@@ -1,0 +1,135 @@
+{
+  "content": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "mapping.toml",
+        "sha256": "61e10831d0ffefeb36d0cb763469834e908c7c2d61e2ddebc551f1349725aeda"
+      },
+      {
+        "path": "model.sysml",
+        "sha256": "f93b82fe4b262ac4a6ca3bd8e375e78f6350ea60b3a4304847d29175d0722292"
+      },
+      {
+        "path": "noema.package.toml",
+        "sha256": "161c5428475b4eae0cfb94d2670eac71360aeab34023c49156ef177db6c8921d"
+      }
+    ],
+    "sha256": "14f636824c2b06e15efc97aa400ea3cae58632e1685a52c78af34c35987af30e"
+  },
+  "evidence": {
+    "ci": "passed",
+    "report_sha256": "01290318f52242d3dbb3c92afd5adc638460f93c9940cbcec9cbd85c66da55d1",
+    "review": "approved",
+    "review_url": "https://github.com/blentry/noema-packages/pull/2",
+    "reviewer": "codex-delegated-by-blentry",
+    "scope": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "maintainer": "blentry",
+  "manifest": {
+    "contracts": [
+      "mapping.toml"
+    ],
+    "dependencies": [
+      {
+        "id": "org.noema.heat-boundary",
+        "release": "0.1.0"
+      },
+      {
+        "id": "org.noema.joule-heating",
+        "release": "0.1.0"
+      }
+    ],
+    "exports": {
+      "symbols": [
+        "JouleToHeat"
+      ],
+      "views": []
+    },
+    "id": "org.noema.joule-to-heat",
+    "kind": "mapping",
+    "license": "Apache-2.0",
+    "license_file": "LICENSE",
+    "model": {
+      "files": [
+        "model.sysml"
+      ]
+    },
+    "release": "0.1.0",
+    "schema": "noema.package/0.2",
+    "standard": {
+      "kerml": "1.0",
+      "library": "pilot-2026-04",
+      "sysml": "2.0"
+    }
+  },
+  "mappings": [
+    {
+      "assumptions": [
+        {
+          "description": "All modeled resistive dissipation enters the selected thermal boundary as heat.",
+          "id": "all-loss-enters-boundary"
+        },
+        {
+          "description": "Resistance is nonnegative and constant at the selected operating point; temperature dependence is excluded.",
+          "id": "constant-nonnegative-resistance"
+        },
+        {
+          "description": "Current is steady and transient electrical energy storage is excluded.",
+          "id": "steady-current"
+        }
+      ],
+      "conversion": {
+        "kind": "identity"
+      },
+      "from": {
+        "package": "org.noema.joule-heating",
+        "port": "power",
+        "view": "joule-heating"
+      },
+      "losses": [
+        {
+          "description": "The boundary retains total heat flow, not its spatial distribution.",
+          "id": "spatial-distribution"
+        }
+      ],
+      "name": "joule-to-heat",
+      "preconditions": [],
+      "preserves": [
+        "cardinality",
+        "quantity-value"
+      ],
+      "schema": "noema.mapping/0.1",
+      "to": {
+        "package": "org.noema.heat-boundary",
+        "port": "heat",
+        "view": "heat-boundary"
+      }
+    }
+  ],
+  "schema": "noema.registry-release/0.1",
+  "source": {
+    "commit": "97a6ef23619ebf0896f7c1d2f590433dcf53f5b9",
+    "source": "https://github.com/blentry/noema-packages.git",
+    "source_kind": "git",
+    "subdir": "packages/joule-to-heat/0.1.0"
+  }
+}

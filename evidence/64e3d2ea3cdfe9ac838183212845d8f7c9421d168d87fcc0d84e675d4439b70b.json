@@ -1,0 +1,329 @@
+{
+  "diagnostics": [],
+  "lock": {
+    "packages": [
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "a7a32a1eb34af26aab1c7698054bf3bc94798f2a90bc4b1bb78efe98ef9f6070"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "3519d7edf14716f8e32537fa6bb6f0466d5e3530aa3165afa00450c649945675"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "6e593507d825bdbc2b9bc02da5b7c1b02bf7976cc2055f722cb991e5edd35728"
+            }
+          ],
+          "sha256": "a9d70fe11923e957ec7fbb217b4a825c2de676315ed13c29978fef2098c72b17"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "HeatBoundary::Boundary"
+          ],
+          "views": [
+            "heat-boundary"
+          ]
+        },
+        "id": "org.noema.heat-boundary",
+        "release": "0.1.0",
+        "source": {
+          "commit": "97a6ef23619ebf0896f7c1d2f590433dcf53f5b9",
+          "source": "https://github.com/blentry/noema-packages.git",
+          "source_kind": "git",
+          "subdir": "packages/heat-boundary/0.1.0"
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      },
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "e6fa9ed42c342d37b53bf844ab6ddb8bc70c446f892e176816f3259877698412"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "27d722426c935eaacec648f12fe6733476a7a54200d5bac0f65ba5215cd55d7d"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "b6ff28677139988c0cecb311f00fd0e8bd8d41137beb242f4cb020a315f182cb"
+            }
+          ],
+          "sha256": "cf614a928be2606afde877549f5a8e56a9708faf99a43f627e5bf3efb906db7c"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "JouleHeating::ConstantResistance"
+          ],
+          "views": [
+            "joule-heating"
+          ]
+        },
+        "id": "org.noema.joule-heating",
+        "release": "0.1.0",
+        "source": {
+          "commit": "97a6ef23619ebf0896f7c1d2f590433dcf53f5b9",
+          "source": "https://github.com/blentry/noema-packages.git",
+          "source_kind": "git",
+          "subdir": "packages/joule-heating/0.1.0"
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      },
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "mapping.toml",
+              "sha256": "61e10831d0ffefeb36d0cb763469834e908c7c2d61e2ddebc551f1349725aeda"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "f93b82fe4b262ac4a6ca3bd8e375e78f6350ea60b3a4304847d29175d0722292"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "161c5428475b4eae0cfb94d2670eac71360aeab34023c49156ef177db6c8921d"
+            }
+          ],
+          "sha256": "14f636824c2b06e15efc97aa400ea3cae58632e1685a52c78af34c35987af30e"
+        },
+        "dependencies": [
+          {
+            "id": "org.noema.heat-boundary",
+            "release": "0.1.0"
+          },
+          {
+            "id": "org.noema.joule-heating",
+            "release": "0.1.0"
+          }
+        ],
+        "exports": {
+          "symbols": [
+            "JouleToHeat"
+          ],
+          "views": []
+        },
+        "id": "org.noema.joule-to-heat",
+        "release": "0.1.0",
+        "source": {
+          "commit": "97a6ef23619ebf0896f7c1d2f590433dcf53f5b9",
+          "source": "https://github.com/blentry/noema-packages.git",
+          "source_kind": "git",
+          "subdir": "packages/joule-to-heat/0.1.0"
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      },
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "30cc3bc0e223d59dd4207812e25404d696c1950fd2a64c7c40049bf305883742"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "1b56f8f482c7d7bbbb512fff4a575209127d6ef2e2f9215a843e44cdd263a95d"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "05fe002257e7c7406caa6b3e34e85584876835396967ba8804601e06f471cdeb"
+            }
+          ],
+          "sha256": "55cfbc169c1dd8b24801321683a172ba4dd9df2b031b3364dfc180edca24ea78"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "ResistiveOperatingPoint::Point"
+          ],
+          "views": [
+            "resistive-operating-point"
+          ]
+        },
+        "id": "org.noema.resistive-operating-point",
+        "release": "0.1.0",
+        "source": {
+          "commit": "97a6ef23619ebf0896f7c1d2f590433dcf53f5b9",
+          "source": "https://github.com/blentry/noema-packages.git",
+          "source_kind": "git",
+          "subdir": "packages/resistive-operating-point/0.1.0"
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      },
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "d3e855400cd76fe80aa12c386fe5271b47965e295d323db2d1e9d7adffe3eb32"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "67d8bfebee2879056ff9747a8b97f68311c86fc82f9ba87dd6a1bf5ac0ae871d"
+            }
+          ],
+          "sha256": "8f577b50898f766eb82a612f7d75887af3ecd8c189c712c3be777c86fc67583c"
+        },
+        "dependencies": [
+          {
+            "id": "org.noema.heat-boundary",
+            "release": "0.1.0"
+          },
+          {
+            "id": "org.noema.joule-heating",
+            "release": "0.1.0"
+          },
+          {
+            "id": "org.noema.joule-to-heat",
+            "release": "0.1.0"
+          },
+          {
+            "id": "org.noema.resistive-operating-point",
+            "release": "0.1.0"
+          }
+        ],
+        "exports": {
+          "symbols": [
+            "WindingLoss::point",
+            "WindingLoss::dissipation",
+            "WindingLoss::boundary"
+          ],
+          "views": []
+        },
+        "id": "org.noema.winding-loss",
+        "release": "0.1.0",
+        "source": {
+          "commit": "",
+          "source": "root",
+          "source_kind": "path",
+          "subdir": "."
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      }
+    ],
+    "project_sha256": "7974ad97a859f0ab4ca32dbbebfbfa6fff43d130774ca958f53d876480daac7c",
+    "root": {
+      "id": "org.noema.winding-loss",
+      "release": "0.1.0"
+    },
+    "schema": "noema.lock/0.3",
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "locked": false,
+  "model": {
+    "diagnostics": [],
+    "exports": [
+      {
+        "file": "org.noema.heat-boundary/model.sysml",
+        "kind": "PartDefinition",
+        "name": "HeatBoundary::Boundary"
+      },
+      {
+        "file": "org.noema.joule-heating/model.sysml",
+        "kind": "PartDefinition",
+        "name": "JouleHeating::ConstantResistance"
+      },
+      {
+        "file": "org.noema.joule-to-heat/model.sysml",
+        "kind": "Package",
+        "name": "JouleToHeat"
+      },
+      {
+        "file": "org.noema.resistive-operating-point/model.sysml",
+        "kind": "PartDefinition",
+        "name": "ResistiveOperatingPoint::Point"
+      },
+      {
+        "file": "org.noema.winding-loss/model.sysml",
+        "kind": "PartUsage",
+        "name": "WindingLoss::boundary"
+      },
+      {
+        "file": "org.noema.winding-loss/model.sysml",
+        "kind": "PartUsage",
+        "name": "WindingLoss::dissipation"
+      },
+      {
+        "file": "org.noema.winding-loss/model.sysml",
+        "kind": "PartUsage",
+        "name": "WindingLoss::point"
+      }
+    ],
+    "facts": [],
+    "schema": "noema.model-result/0.2",
+    "status": "valid",
+    "tool_baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a"
+  },
+  "schema": "noema.command-result/0.1",
+  "scope": {
+    "executed": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "not_covered": [
+      "composition",
+      "mapping-semantics",
+      "unit-compatibility",
+      "requirement-acceptance"
+    ]
+  },
+  "status": "valid"
+}

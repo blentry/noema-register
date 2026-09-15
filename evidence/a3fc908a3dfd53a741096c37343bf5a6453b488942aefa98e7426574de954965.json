@@ -1,0 +1,99 @@
+{
+  "diagnostics": [],
+  "lock": {
+    "packages": [
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "e6fa9ed42c342d37b53bf844ab6ddb8bc70c446f892e176816f3259877698412"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "27d722426c935eaacec648f12fe6733476a7a54200d5bac0f65ba5215cd55d7d"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "b6ff28677139988c0cecb311f00fd0e8bd8d41137beb242f4cb020a315f182cb"
+            }
+          ],
+          "sha256": "cf614a928be2606afde877549f5a8e56a9708faf99a43f627e5bf3efb906db7c"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "JouleHeating::ConstantResistance"
+          ],
+          "views": [
+            "joule-heating"
+          ]
+        },
+        "id": "org.noema.joule-heating",
+        "release": "0.1.0",
+        "source": {
+          "commit": "",
+          "source": "root",
+          "source_kind": "path",
+          "subdir": "."
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      }
+    ],
+    "project_sha256": "7b2131d1f06d78b4cb782d6bd40537edb5927f4203241c9bd72bf928f9f7d4e9",
+    "root": {
+      "id": "org.noema.joule-heating",
+      "release": "0.1.0"
+    },
+    "schema": "noema.lock/0.3",
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "locked": false,
+  "model": {
+    "diagnostics": [],
+    "exports": [
+      {
+        "file": "org.noema.joule-heating/model.sysml",
+        "kind": "PartDefinition",
+        "name": "JouleHeating::ConstantResistance"
+      }
+    ],
+    "facts": [],
+    "schema": "noema.model-result/0.2",
+    "status": "valid",
+    "tool_baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a"
+  },
+  "schema": "noema.command-result/0.1",
+  "scope": {
+    "executed": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "not_covered": [
+      "composition",
+      "mapping-semantics",
+      "unit-compatibility",
+      "requirement-acceptance"
+    ]
+  },
+  "status": "valid"
+}

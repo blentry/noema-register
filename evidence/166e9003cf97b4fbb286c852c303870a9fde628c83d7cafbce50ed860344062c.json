@@ -1,0 +1,99 @@
+{
+  "diagnostics": [],
+  "lock": {
+    "packages": [
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "30cc3bc0e223d59dd4207812e25404d696c1950fd2a64c7c40049bf305883742"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "1b56f8f482c7d7bbbb512fff4a575209127d6ef2e2f9215a843e44cdd263a95d"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "05fe002257e7c7406caa6b3e34e85584876835396967ba8804601e06f471cdeb"
+            }
+          ],
+          "sha256": "55cfbc169c1dd8b24801321683a172ba4dd9df2b031b3364dfc180edca24ea78"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "ResistiveOperatingPoint::Point"
+          ],
+          "views": [
+            "resistive-operating-point"
+          ]
+        },
+        "id": "org.noema.resistive-operating-point",
+        "release": "0.1.0",
+        "source": {
+          "commit": "",
+          "source": "root",
+          "source_kind": "path",
+          "subdir": "."
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      }
+    ],
+    "project_sha256": "2a1d57952618caceb1ad9d83f569280cba73a353cfac2977eebcb1a1177e3dda",
+    "root": {
+      "id": "org.noema.resistive-operating-point",
+      "release": "0.1.0"
+    },
+    "schema": "noema.lock/0.3",
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "locked": false,
+  "model": {
+    "diagnostics": [],
+    "exports": [
+      {
+        "file": "org.noema.resistive-operating-point/model.sysml",
+        "kind": "PartDefinition",
+        "name": "ResistiveOperatingPoint::Point"
+      }
+    ],
+    "facts": [],
+    "schema": "noema.model-result/0.2",
+    "status": "valid",
+    "tool_baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a"
+  },
+  "schema": "noema.command-result/0.1",
+  "scope": {
+    "executed": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "not_covered": [
+      "composition",
+      "mapping-semantics",
+      "unit-compatibility",
+      "requirement-acceptance"
+    ]
+  },
+  "status": "valid"
+}

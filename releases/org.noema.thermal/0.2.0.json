@@ -1,0 +1,85 @@
+{
+  "content": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "model.sysml",
+        "sha256": "8f1742cb03ab396bf702f8ddaf3b54c876521b17a13ebe16d6ee133a715b3612"
+      },
+      {
+        "path": "noema.package.toml",
+        "sha256": "d68fe65779f7a6a5fcb6e7e8e169b2f66a1a8321a08988b1965da74751c7c9af"
+      },
+      {
+        "path": "view.toml",
+        "sha256": "146feb927de6af6b4ac495dea92b13e92631743552c2f95b04e3f9ed6a028186"
+      }
+    ],
+    "sha256": "4a0b663d6cd369992bf416ea0b8856ba8a3d535bc0a9dfc5fcef134038053987"
+  },
+  "evidence": {
+    "ci": "passed",
+    "report_sha256": "b36a893e01b2873d62275350b0c91a2901ba9ce7c24c21ec0ccee13d031d0ca3",
+    "review": "approved",
+    "review_url": "https://github.com/blentry/noema-packages/pull/1",
+    "reviewer": "codex-delegated-by-blentry",
+    "scope": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "maintainer": "blentry",
+  "manifest": {
+    "contracts": [
+      "view.toml"
+    ],
+    "dependencies": [],
+    "exports": {
+      "symbols": [
+        "Thermal::ThermalPlant"
+      ],
+      "views": [
+        "thermal"
+      ]
+    },
+    "id": "org.noema.thermal",
+    "kind": "model",
+    "license": "Apache-2.0",
+    "license_file": "LICENSE",
+    "model": {
+      "files": [
+        "model.sysml"
+      ]
+    },
+    "release": "0.2.0",
+    "schema": "noema.package/0.2",
+    "standard": {
+      "kerml": "1.0",
+      "library": "pilot-2026-04",
+      "sysml": "2.0"
+    }
+  },
+  "mappings": [],
+  "schema": "noema.registry-release/0.1",
+  "source": {
+    "commit": "b1716cddf4b9e69fadbcb7dfa5aec5236b8b6489",
+    "source": "https://github.com/blentry/noema-packages.git",
+    "source_kind": "git",
+    "subdir": "packages/thermal/0.2.0"
+  }
+}

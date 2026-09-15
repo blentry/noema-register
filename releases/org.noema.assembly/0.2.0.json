@@ -1,0 +1,100 @@
+{
+  "content": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "model.sysml",
+        "sha256": "83b8a23789508976e31c0d786798285ae3969c411c49b3e7249f832b748d312b"
+      },
+      {
+        "path": "noema.package.toml",
+        "sha256": "a5a3a1a4effa814e342019e16d43dd74b463f32ab40071125374ed2557afad20"
+      }
+    ],
+    "sha256": "51f7479093479a462dfc261399748ee03188b7a18b4251075c7e3c0a5a2b1f2a"
+  },
+  "evidence": {
+    "ci": "passed",
+    "report_sha256": "f6dabad3a7e1d666d606b066323a39d5051782c854e45de1a727cc8ced0e39b3",
+    "review": "approved",
+    "review_url": "https://github.com/blentry/noema-packages/pull/1",
+    "reviewer": "codex-delegated-by-blentry",
+    "scope": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "maintainer": "blentry",
+  "manifest": {
+    "contracts": [],
+    "dependencies": [
+      {
+        "id": "org.noema.control",
+        "release": "0.2.0"
+      },
+      {
+        "id": "org.noema.loss-to-heat",
+        "release": "0.2.0"
+      },
+      {
+        "id": "org.noema.motor",
+        "release": "0.2.0"
+      },
+      {
+        "id": "org.noema.speed-to-control",
+        "release": "0.2.0"
+      },
+      {
+        "id": "org.noema.thermal",
+        "release": "0.2.0"
+      }
+    ],
+    "exports": {
+      "symbols": [
+        "Assembly::motor",
+        "Assembly::thermal",
+        "Assembly::controller"
+      ],
+      "views": []
+    },
+    "id": "org.noema.assembly",
+    "kind": "example",
+    "license": "Apache-2.0",
+    "license_file": "LICENSE",
+    "model": {
+      "files": [
+        "model.sysml"
+      ]
+    },
+    "release": "0.2.0",
+    "schema": "noema.package/0.2",
+    "standard": {
+      "kerml": "1.0",
+      "library": "pilot-2026-04",
+      "sysml": "2.0"
+    }
+  },
+  "mappings": [],
+  "schema": "noema.registry-release/0.1",
+  "source": {
+    "commit": "b1716cddf4b9e69fadbcb7dfa5aec5236b8b6489",
+    "source": "https://github.com/blentry/noema-packages.git",
+    "source_kind": "git",
+    "subdir": "packages/assembly/0.2.0"
+  }
+}

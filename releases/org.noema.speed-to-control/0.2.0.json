@@ -1,0 +1,115 @@
+{
+  "content": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "mapping.toml",
+        "sha256": "557afb2e947876bf6fec045f3968e49a935588648d6b97525d93136d6139d857"
+      },
+      {
+        "path": "model.sysml",
+        "sha256": "219f5c3217e04f7d92f05d83b1cb9029ecd5acce1afc9f8c304989a80d1089fe"
+      },
+      {
+        "path": "noema.package.toml",
+        "sha256": "edb7147a7d8c9f4e2b1dae8d4b3694399708ddade02a8ee0a04019934ee0849b"
+      }
+    ],
+    "sha256": "4563284094fec130e837c6f553209d5e61c9d4b3f15efaf71d7fc26a4117fe4f"
+  },
+  "evidence": {
+    "ci": "passed",
+    "report_sha256": "aa6f5fc4b17dc5cd62d9d822269840f135cad949a11a48f484aeb257fbced434",
+    "review": "approved",
+    "review_url": "https://github.com/blentry/noema-packages/pull/1",
+    "reviewer": "codex-delegated-by-blentry",
+    "scope": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "maintainer": "blentry",
+  "manifest": {
+    "contracts": [
+      "mapping.toml"
+    ],
+    "dependencies": [
+      {
+        "id": "org.noema.control",
+        "release": "0.2.0"
+      },
+      {
+        "id": "org.noema.motor",
+        "release": "0.2.0"
+      }
+    ],
+    "exports": {
+      "symbols": [],
+      "views": []
+    },
+    "id": "org.noema.speed-to-control",
+    "kind": "mapping",
+    "license": "Apache-2.0",
+    "license_file": "LICENSE",
+    "model": {
+      "files": [
+        "model.sysml"
+      ]
+    },
+    "release": "0.2.0",
+    "schema": "noema.package/0.2",
+    "standard": {
+      "kerml": "1.0",
+      "library": "pilot-2026-04",
+      "sysml": "2.0"
+    }
+  },
+  "mappings": [
+    {
+      "assumptions": [],
+      "conversion": {
+        "kind": "identity"
+      },
+      "from": {
+        "package": "org.noema.motor",
+        "port": "speed",
+        "view": "motor"
+      },
+      "losses": [],
+      "name": "speed-to-control",
+      "preconditions": [],
+      "preserves": [
+        "cardinality",
+        "quantity-value"
+      ],
+      "schema": "noema.mapping/0.1",
+      "to": {
+        "package": "org.noema.control",
+        "port": "speed",
+        "view": "control"
+      }
+    }
+  ],
+  "schema": "noema.registry-release/0.1",
+  "source": {
+    "commit": "b1716cddf4b9e69fadbcb7dfa5aec5236b8b6489",
+    "source": "https://github.com/blentry/noema-packages.git",
+    "source_kind": "git",
+    "subdir": "packages/speed-to-control/0.2.0"
+  }
+}

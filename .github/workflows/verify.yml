@@ -1,0 +1,43 @@
+name: Verify Registry
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+          path: registry
+      - name: Read fixed verifier revision
+        id: tool
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          revision = json.load(open('registry/noema-tool.json'))['commit']
+          assert re.fullmatch('[0-9a-f]{40}', revision)
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+              out.write('commit=' + revision + '\n')
+          PY
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: blentry/noema
+          ref: ${{ steps.tool.outputs.commit }}
+          path: verifier
+      - name: Build and prepare verifier
+        working-directory: verifier
+        run: |
+          cargo build --package noema --locked
+          target/debug/noema tools prepare
+      - name: Verify records, source tags, evidence and previous releases
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          previous=()
+          if [[ "$BASE_SHA" =~ ^[0-9a-f]{40}$ ]] && [[ "$BASE_SHA" != 0000000000000000000000000000000000000000 ]] && git -C registry cat-file -e "$BASE_SHA:index.json"; then
+            git -C registry show "$BASE_SHA:index.json" > previous-index.json
+            previous=(--previous previous-index.json)
+          fi
+          python3 verifier/scripts/distribution.py verify-index --registry registry --noema verifier/target/debug/noema --cache "$HOME/.cache/noema" "${previous[@]}"

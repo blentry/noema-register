@@ -1,0 +1,199 @@
+{
+  "diagnostics": [],
+  "lock": {
+    "packages": [
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "92ad4b4807118a77c21ab25a9210978d83c89c4360397e2dd51fb42d9829d358"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "ddab821414d7b2f9d09544129e48249256c0c7c2526ae9169bed6ccecc06c2ec"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "a6868651c7756a5f5f0a61be08c6380039e160701ab79ac197d9f6d707597b03"
+            }
+          ],
+          "sha256": "d552686b27490676399f618672438b581037572c5d1912f3b5b57948ba3125f4"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "Control::Controller"
+          ],
+          "views": [
+            "control"
+          ]
+        },
+        "id": "org.noema.control",
+        "release": "0.2.0",
+        "source": {
+          "commit": "b1716cddf4b9e69fadbcb7dfa5aec5236b8b6489",
+          "source": "https://github.com/blentry/noema-packages.git",
+          "source_kind": "git",
+          "subdir": "packages/control/0.2.0"
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      },
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "2280b0da35d9d2112630ae8adf07708d9e8ae3985239a80bca449834cb6e1954"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "052d9f37788c8a3332fcb1676578fb4d32c7ca0579e3be2315120575042ef29c"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "fd0ba9be46abb05dfb5b335ee332acb6c78a518b7199760c9eba720b8e172bd4"
+            }
+          ],
+          "sha256": "85f57d5fd7d027e2a27e87dab4074cadba5e6047287941f2d03e298caeb780e9"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "Motor::Motor"
+          ],
+          "views": [
+            "motor"
+          ]
+        },
+        "id": "org.noema.motor",
+        "release": "0.2.0",
+        "source": {
+          "commit": "b1716cddf4b9e69fadbcb7dfa5aec5236b8b6489",
+          "source": "https://github.com/blentry/noema-packages.git",
+          "source_kind": "git",
+          "subdir": "packages/motor/0.2.0"
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      },
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "mapping.toml",
+              "sha256": "557afb2e947876bf6fec045f3968e49a935588648d6b97525d93136d6139d857"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "219f5c3217e04f7d92f05d83b1cb9029ecd5acce1afc9f8c304989a80d1089fe"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "edb7147a7d8c9f4e2b1dae8d4b3694399708ddade02a8ee0a04019934ee0849b"
+            }
+          ],
+          "sha256": "4563284094fec130e837c6f553209d5e61c9d4b3f15efaf71d7fc26a4117fe4f"
+        },
+        "dependencies": [
+          {
+            "id": "org.noema.control",
+            "release": "0.2.0"
+          },
+          {
+            "id": "org.noema.motor",
+            "release": "0.2.0"
+          }
+        ],
+        "exports": {
+          "symbols": [],
+          "views": []
+        },
+        "id": "org.noema.speed-to-control",
+        "release": "0.2.0",
+        "source": {
+          "commit": "",
+          "source": "root",
+          "source_kind": "path",
+          "subdir": "."
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      }
+    ],
+    "project_sha256": "4ffa32fb4dc85c64b831fb97ad549cf3d6613cec033a793bc86a7674671d93a9",
+    "root": {
+      "id": "org.noema.speed-to-control",
+      "release": "0.2.0"
+    },
+    "schema": "noema.lock/0.3",
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "locked": false,
+  "model": {
+    "diagnostics": [],
+    "exports": [
+      {
+        "file": "org.noema.control/model.sysml",
+        "kind": "PartDefinition",
+        "name": "Control::Controller"
+      },
+      {
+        "file": "org.noema.motor/model.sysml",
+        "kind": "PartDefinition",
+        "name": "Motor::Motor"
+      }
+    ],
+    "facts": [],
+    "schema": "noema.model-result/0.2",
+    "status": "valid",
+    "tool_baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a"
+  },
+  "schema": "noema.command-result/0.1",
+  "scope": {
+    "executed": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "not_covered": [
+      "composition",
+      "mapping-semantics",
+      "unit-compatibility",
+      "requirement-acceptance"
+    ]
+  },
+  "status": "valid"
+}

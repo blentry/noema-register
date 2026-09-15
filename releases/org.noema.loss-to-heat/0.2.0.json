@@ -1,0 +1,135 @@
+{
+  "content": {
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "mapping.toml",
+        "sha256": "d9202f65b5e54d35c52fbe572db3900706195e7b554f1f1f575f919213a26ff0"
+      },
+      {
+        "path": "model.sysml",
+        "sha256": "4aa6675d3d6614c92863725f829777e14669f17131f731414c128d5c4cc8f6d4"
+      },
+      {
+        "path": "noema.package.toml",
+        "sha256": "0dff8821ddb0b25698fed68055309abde0d8b8f5e904b1080a6ff76e9817e547"
+      }
+    ],
+    "sha256": "7f4610244b0bfee5cad203d3c0e82b8e4c9deec8b224671fb715d88bce065d1f"
+  },
+  "evidence": {
+    "ci": "passed",
+    "report_sha256": "ff8ae5c864ff0a66cb911788b7c52a9b92ee37890cb2a70f00b7da27d5dc89d4",
+    "review": "approved",
+    "review_url": "https://github.com/blentry/noema-packages/pull/1",
+    "reviewer": "codex-delegated-by-blentry",
+    "scope": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "maintainer": "blentry",
+  "manifest": {
+    "contracts": [
+      "mapping.toml"
+    ],
+    "dependencies": [
+      {
+        "id": "org.noema.motor",
+        "release": "0.2.0"
+      },
+      {
+        "id": "org.noema.thermal",
+        "release": "0.2.0"
+      }
+    ],
+    "exports": {
+      "symbols": [],
+      "views": []
+    },
+    "id": "org.noema.loss-to-heat",
+    "kind": "mapping",
+    "license": "Apache-2.0",
+    "license_file": "LICENSE",
+    "model": {
+      "files": [
+        "model.sysml"
+      ]
+    },
+    "release": "0.2.0",
+    "schema": "noema.package/0.2",
+    "standard": {
+      "kerml": "1.0",
+      "library": "pilot-2026-04",
+      "sysml": "2.0"
+    }
+  },
+  "mappings": [
+    {
+      "assumptions": [
+        {
+          "description": "The selected boundary represents all motor power loss as heat entering the thermal plant.",
+          "id": "loss-becomes-heat"
+        }
+      ],
+      "conversion": {
+        "factor": {
+          "denominator": 1,
+          "numerator": 1000
+        },
+        "kind": "scale"
+      },
+      "from": {
+        "package": "org.noema.motor",
+        "port": "loss",
+        "view": "motor"
+      },
+      "losses": [
+        {
+          "description": "The lumped thermal input does not retain spatial distribution of motor losses.",
+          "id": "spatial-distribution"
+        }
+      ],
+      "name": "loss-to-heat",
+      "preconditions": [
+        {
+          "op": "equal",
+          "parameter": "source.quantity_kind",
+          "value": "ISQMechanics::PowerValue"
+        }
+      ],
+      "preserves": [
+        "cardinality",
+        "quantity-value"
+      ],
+      "schema": "noema.mapping/0.1",
+      "to": {
+        "package": "org.noema.thermal",
+        "port": "heat",
+        "view": "thermal"
+      }
+    }
+  ],
+  "schema": "noema.registry-release/0.1",
+  "source": {
+    "commit": "b1716cddf4b9e69fadbcb7dfa5aec5236b8b6489",
+    "source": "https://github.com/blentry/noema-packages.git",
+    "source_kind": "git",
+    "subdir": "packages/loss-to-heat/0.2.0"
+  }
+}

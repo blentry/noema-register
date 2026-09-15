@@ -1,0 +1,99 @@
+{
+  "diagnostics": [],
+  "lock": {
+    "packages": [
+      {
+        "content": {
+          "files": [
+            {
+              "path": "LICENSE",
+              "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+            },
+            {
+              "path": "model.sysml",
+              "sha256": "8f1742cb03ab396bf702f8ddaf3b54c876521b17a13ebe16d6ee133a715b3612"
+            },
+            {
+              "path": "noema.package.toml",
+              "sha256": "d68fe65779f7a6a5fcb6e7e8e169b2f66a1a8321a08988b1965da74751c7c9af"
+            },
+            {
+              "path": "view.toml",
+              "sha256": "146feb927de6af6b4ac495dea92b13e92631743552c2f95b04e3f9ed6a028186"
+            }
+          ],
+          "sha256": "4a0b663d6cd369992bf416ea0b8856ba8a3d535bc0a9dfc5fcef134038053987"
+        },
+        "dependencies": [],
+        "exports": {
+          "symbols": [
+            "Thermal::ThermalPlant"
+          ],
+          "views": [
+            "thermal"
+          ]
+        },
+        "id": "org.noema.thermal",
+        "release": "0.2.0",
+        "source": {
+          "commit": "",
+          "source": "root",
+          "source_kind": "path",
+          "subdir": "."
+        },
+        "standard": {
+          "kerml": "1.0",
+          "library": "pilot-2026-04",
+          "sysml": "2.0"
+        }
+      }
+    ],
+    "project_sha256": "22f454e0e328b8a67ec3ae49d9d33f406b6cefefcf1425c5afaa37eb0a5c039a",
+    "root": {
+      "id": "org.noema.thermal",
+      "release": "0.2.0"
+    },
+    "schema": "noema.lock/0.3",
+    "tool": {
+      "baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a",
+      "bridge_sha256": "8093c34d61133e10b2d09afe3cc8d408f6d70568beb40c895372c5efd00b9043",
+      "engine_sha256": "a2a6a1eca89a53469a615616c064a369ba2f297e8066a338f57751babb871276",
+      "standard": {
+        "kerml": "1.0",
+        "library": "pilot-2026-04",
+        "sysml": "2.0"
+      }
+    }
+  },
+  "locked": false,
+  "model": {
+    "diagnostics": [],
+    "exports": [
+      {
+        "file": "org.noema.thermal/model.sysml",
+        "kind": "PartDefinition",
+        "name": "Thermal::ThermalPlant"
+      }
+    ],
+    "facts": [],
+    "schema": "noema.model-result/0.2",
+    "status": "valid",
+    "tool_baseline_sha256": "562ec4177cbe69d23300238ab591af655c05c1a170affc6ea3a6eabc9d752b7a"
+  },
+  "schema": "noema.command-result/0.1",
+  "scope": {
+    "executed": [
+      "package-closure",
+      "content-integrity",
+      "model-validation",
+      "declared-exports"
+    ],
+    "not_covered": [
+      "composition",
+      "mapping-semantics",
+      "unit-compatibility",
+      "requirement-acceptance"
+    ]
+  },
+  "status": "valid"
+}
